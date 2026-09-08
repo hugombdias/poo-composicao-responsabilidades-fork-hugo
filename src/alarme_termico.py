@@ -4,8 +4,14 @@ class AlarmeTermico:
 
     def avaliar(self, temperatura: float) -> None:
         _ = temperatura
-        # TODO checkpoint 01: aplicar os limites e preservar o estado intermediario.
 
+        if _ > 45.0:
+            self._ligado = True
+
+        if _ < 40.0:
+            self._ligado = False
+
+        
     @property
     def ligado(self) -> bool:
         return self._ligado
